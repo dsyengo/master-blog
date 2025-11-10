@@ -1,0 +1,268 @@
+@import "tailwindcss";
+
+/* Base styles for light mode */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111827;
+  --border-color: #e5e7eb;
+}
+
+/* Base styles for dark mode */
+.dark {
+  --bg-color: #111827;
+  --text-color: #f9fafb;
+  --border-color: #374151;
+}
+
+/* Apply base styles */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Ensure all elements inherit colors */
+* {
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+/* Force specific elements to use theme colors */
+.bg-white {
+  background-color: white !important;
+}
+
+.dark .bg-white {
+  background-color: #1f2937 !important;
+}
+
+.bg-neutral-50 {
+  background-color: #f9fafb !important;
+}
+
+.dark .bg-neutral-50 {
+  background-color: #111827 !important;
+}
+
+.bg-neutral-100 {
+  background-color: #f3f4f6 !important;
+}
+
+.dark .bg-neutral-100 {
+  background-color: #1f2937 !important;
+}
+
+.bg-neutral-800 {
+  background-color: #1f2937 !important;
+}
+
+.dark .bg-neutral-800 {
+  background-color: #111827 !important;
+}
+
+.bg-neutral-900 {
+  background-color: #111827 !important;
+}
+
+.dark .bg-neutral-900 {
+  background-color: #030712 !important;
+}
+
+/* Text colors */
+.text-neutral-800 {
+  color: #1f2937 !important;
+}
+
+.dark .text-neutral-800 {
+  color: #f9fafb !important;
+}
+
+.text-neutral-700 {
+  color: #374151 !important;
+}
+
+.dark .text-neutral-700 {
+  color: #e5e7eb !important;
+}
+
+.text-neutral-600 {
+  color: #4b5563 !important;
+}
+
+.dark .text-neutral-600 {
+  color: #d1d5db !important;
+}
+
+.text-neutral-500 {
+  color: #6b7280 !important;
+}
+
+.dark .text-neutral-500 {
+  color: #9ca3af !important;
+}
+
+.text-neutral-400 {
+  color: #9ca3af !important;
+}
+
+.dark .text-neutral-400 {
+  color: #6b7280 !important;
+}
+
+.text-neutral-300 {
+  color: #d1d5db !important;
+}
+
+.dark .text-neutral-300 {
+  color: #4b5563 !important;
+}
+
+/* Border colors */
+.border-neutral-200 {
+  border-color: #e5e7eb !important;
+}
+
+.dark .border-neutral-200 {
+  border-color: #374151 !important;
+}
+
+.border-neutral-300 {
+  border-color: #d1d5db !important;
+}
+
+.dark .border-neutral-300 {
+  border-color: #4b5563 !important;
+}
+
+.border-neutral-600 {
+  border-color: #4b5563 !important;
+}
+
+.dark .border-neutral-600 {
+  border-color: #d1d5db !important;
+}
+
+.border-neutral-700 {
+  border-color: #374151 !important;
+}
+
+.dark .border-neutral-700 {
+  border-color: #e5e7eb !important;
+}
+
+/* Input styles */
+input,
+textarea,
+select {
+  background-color: white !important;
+  color: #111827 !important;
+  border-color: #d1d5db !important;
+}
+
+.dark input,
+.dark textarea,
+.dark select {
+  background-color: #1f2937 !important;
+  color: #f9fafb !important;
+  border-color: #374151 !important;
+}
+
+/* Button overrides */
+.btn-light {
+  background-color: white !important;
+  color: #111827 !important;
+  border-color: #d1d5db !important;
+}
+
+.dark .btn-light {
+  background-color: #374151 !important;
+  color: #f9fafb !important;
+  border-color: #4b5563 !important;
+}
+
+/* Card backgrounds */
+.card-light {
+  background-color: white !important;
+}
+
+.dark .card-light {
+  background-color: #1f2937 !important;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #374151;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #6b7280;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Force dark mode class to apply to all children */
+.dark * {
+  border-color: inherit;
+}
+
+/* Ensure transitions work properly */
+* {
+  transition: color 200ms ease, background-color 200ms ease,
+    border-color 200ms ease !important;
+}
+
+/* Specific component overrides */
+.bg-white {
+  background-color: white !important;
+}
+
+.dark .dark\:bg-neutral-800 {
+  background-color: #1f2937 !important;
+}
+
+.dark .dark\:bg-neutral-900 {
+  background-color: #111827 !important;
+}
+
+/* Text visibility fixes */
+.text-neutral-900 {
+  color: #111827 !important;
+}
+
+.dark .dark\:text-white {
+  color: #f9fafb !important;
+}
+
+.text-neutral-700 {
+  color: #374151 !important;
+}
+
+.dark .dark\:text-neutral-300 {
+  color: #d1d5db !important;
+}
